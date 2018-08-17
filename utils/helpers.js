@@ -1,3 +1,7 @@
+import React from 'react'
+import { View } from 'react-native'
+import { FontAwesome, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons'
+import { black } from './colors'
 export function isBetween (num, x, y) {
   if (num >= x && num <= y) {
     return true
@@ -34,8 +38,100 @@ export function calculateDirection (heading) {
   return direction
 }
 
+
 export function timeToString (time = Date.now()) {
   const date = new Date(time)
   const todayUTC = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()))
   return todayUTC.toISOString().split('T')[0]
+}
+
+export function getMetricMetaInfo (metric) {
+    
+    const info = {
+        run: {
+            displayName: 'Run',
+            max: 50,
+            unit: 'miles',
+            step: 1,
+            type: 'steppers',
+            getIcon() {
+                <View>
+                    <MaterialIcons 
+                        name='directions-run'
+                        color={'black'}
+                        size={35}
+                 />
+                    </View>
+            }
+        },
+        bike: {
+             displayName: 'Bike',
+            max: 100,
+            unit: 'miles',
+            step: 1,
+            type: 'steppers',
+            getIcon() {
+                <View>
+                    <MaterialCommunityIcons 
+                        name='bike'
+                        color={'white'}
+                        size={35}
+                 />
+                    </View>
+            }
+            
+        },
+        swim: { 
+            displayName: 'run',
+            max: 9900,
+            unit: 'metres',
+            step: 100,
+            type: 'steppers',
+            getIcon() {
+                <View>
+                    <MaterialIcons 
+                        name='directions-run'
+                        color={'black'}
+                        size={35}
+                 />
+                    </View>
+            }},
+        sleep: {
+             displayName: 'run',
+            max: 24,
+            unit: 'miles',
+            step: 1,
+            type: 'slider',
+            getIcon() {
+                <View>
+                    <FontAwesome 
+                        name='bed'
+                        color={'black'}
+                        size={35}
+                />
+                    </View>
+            }
+        },
+        eat: {
+             displayName: 'run',
+            max: 10,
+            unit: 'rating',
+            step: 1,
+            type: 'slider',
+            getIcon() {
+                <View>
+                    <FontAwesome 
+                        name='food'
+                        color={'black'}
+                        size={35}
+                />
+                    </View>
+            }
+        },
+        
+    }
+    return typeof metric === 'undefined'
+    ?info
+    :info[metric]
+    
 }
