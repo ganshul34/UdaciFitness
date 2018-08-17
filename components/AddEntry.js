@@ -37,25 +37,27 @@ export default class AddEntry extends Component {
         })   
    }
    slide = ( metric,value ) =>{
-       this.setState(() => {
-         [metric] :value  
-       })
-       
-   }
-    render() {
+       this.setState(() =>({
+                [metric]: value
+
+       }))
+       }
+   
+       render() {
            
            const metaInfo = getMetricMetaInfo()
         return(
         <View>
-           {Object.keys(metaInfo).map((key) =>
+           {  Object.keys(metaInfo).map((key) =>{
            const {getIcon, type, ...rest } = metaInfo[key]
             const value = this.state[key]
-            )}
+          
        return(
        <View key={key}>
-           {getIcon()}
+           { getIcon() }
            </View>
        )
+    })}
             </View>
         )
     }
