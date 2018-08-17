@@ -38,7 +38,7 @@ export default class AddEntry extends Component {
    }
    slide = ( metric,value ) =>{
        this.setState(() => {
-         [metric]: value,  
+         [metric] :value  
        })
        
    }
@@ -48,7 +48,7 @@ export default class AddEntry extends Component {
         return(
         <View>
            {Object.keys(metaInfo).map((key) =>
-           const { getIcon, type, ...rest } = metaInfo[key]
+           const {getIcon, type, ...rest } = metaInfo[key]
             const value = this.state[key]
             )}
        return(
