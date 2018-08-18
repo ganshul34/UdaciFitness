@@ -85,7 +85,7 @@ export default class AddEntry extends Component {
            { type ==='slider'
             ? <UdaciSlider
               value={value}
-              onChange ={(value) => this.state(key,value)}
+              onChange ={(value) => this.slide(key,value)}
               { ...rest }
               />
               : <UdaciSteppers
