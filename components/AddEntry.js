@@ -77,8 +77,8 @@ export default class AddEntry extends Component {
     }
        render() {
            const metaInfo = getMetricMetaInfo()
-           //if ( this.props.alreadyLogged ){
-            if(true){
+           if ( this.props.alreadyLogged ){
+            //if(true){
             return(
                 <View>
                     <Ionicons 
