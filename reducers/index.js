@@ -19,6 +19,6 @@ function enteries ( state = {},action)
        }
     }
     
-}*/
+}
 
 export default enteries
