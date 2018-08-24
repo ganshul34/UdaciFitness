@@ -1,6 +1,6 @@
 import { RECIEVE_ENTRIES ,ADD_ENTRY } from '../actions'
 
-function enteries ( state = {},enteries)
+function enteries ( state = {},action)
 {
     switch(action.type) {
        case RECIEVE_ENTRIES:
@@ -14,8 +14,11 @@ function enteries ( state = {},enteries)
            ...action.entry
 
        }
+       default: {
+           return state;
+       }
     }
     
-}
+}*/
 
 export default enteries
