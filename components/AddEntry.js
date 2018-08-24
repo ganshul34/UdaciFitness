@@ -65,11 +65,11 @@ class AddEntry extends Component {
             [key]: entry
         }))
         this.setState(() => ({
-            run :0,
-        bike :0,
-        swim :0,
-        sleep :0,
-        eat :0,
+           run :0,
+           bike :0,
+           swim :0,
+           sleep :0,
+           eat :0,
         }))
         //Navigate to home
 
