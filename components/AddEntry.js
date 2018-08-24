@@ -6,10 +6,11 @@ import UdaciSteppers from './UdaciSteppers'
 import DateHeader from './DateHeader'
 import { Ionicons } from '@expo/vector-icons'
 import { TextButton } from './TextButton'
-import { SubmitEntry,removeEntry } from '..utils/api'
+import { SubmitEntry,removeEntry } from '../utils/api'
 import { submitEntry } from '../utils/api';
 function SubmitBtn({onPress}){
     return (
+
        <TouchableOpacity
        onPress={onPress}>
        <Text>Submit</Text>
