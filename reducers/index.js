@@ -1,13 +1,12 @@
-import { RECIEVE_ENTRIES ,ADD_ENTRY } from '../actions/index'
-import AddEntry from '../components/AddEntry';
+import { RECIEVE_ENTRIES ,ADD_ENTRY } from '../actions'
 
 function enteries ( state = {},enteries)
 {
-    switch(actions.type) {
+    switch(action.type) {
        case RECIEVE_ENTRIES:
        return{
             ...state,
-            ...actions.enteries
+            ...action.entries
        }
        case  ADD_ENTRY:
        return {
