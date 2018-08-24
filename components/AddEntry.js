@@ -91,7 +91,7 @@ class AddEntry extends Component {
        render() {
            const metaInfo = getMetricMetaInfo()
            if ( this.props.alreadyLogged ){
-            if(true){
+           // if(true){
             return(
                 <View>
                     <Ionicons 
@@ -139,7 +139,7 @@ class AddEntry extends Component {
         )
     }
 }
-}
+
 function mapStateToProps(state){
     const key = timeToString
    /* return{
