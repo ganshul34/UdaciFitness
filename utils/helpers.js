@@ -135,3 +135,8 @@ export function getMetricMetaInfo (metric) {
     :info[metric]
     
 }
+export function getDailyRemainder() {
+  return{
+    today: "Don't forget to add your data today"
+  }
+}
