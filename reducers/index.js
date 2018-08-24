@@ -14,9 +14,9 @@ function enteries ( state = {},action)
            ...action.entry
 
        }
-       default: {
-           return state;
-       }
+       default: 
+           return state
+       
     }
     
 }

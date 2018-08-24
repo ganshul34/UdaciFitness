@@ -1,7 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
 import { FontAwesome, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons'
-import { white, black } from './colors'
+import { red } from './colors'
 export function isBetween (num, x, y) {
   if (num >= x && num <= y) {
     return true
@@ -58,7 +58,7 @@ export function getMetricMetaInfo (metric) {
                 <View>
                     <MaterialIcons 
                         name='directions-run'
-                        color={'black'}
+                        color={red}
                         size={35}
                  />
                     </View>
@@ -74,7 +74,7 @@ export function getMetricMetaInfo (metric) {
                 <View>
                     <MaterialCommunityIcons 
                         name='bike'
-                        color={'black'}
+                        color={red}
                         size={35}
                  />
                     </View>
@@ -91,7 +91,7 @@ export function getMetricMetaInfo (metric) {
                 <View>
                     <MaterialIcons 
                         name='directions-run'
-                        color={'black'}
+                        color={red}
                         size={35}
                  />
                     </View>
@@ -106,7 +106,7 @@ export function getMetricMetaInfo (metric) {
                 <View>
                     <FontAwesome 
                         name='bed'
-                        color={'black'}
+                        color={red}
                         size={35}
                 />
                     </View>
@@ -122,7 +122,7 @@ export function getMetricMetaInfo (metric) {
                 <View>
                     <FontAwesome 
                         name='food'
-                        color={'black'}
+                        color={red}
                         size={35}
                 />
                     </View>
