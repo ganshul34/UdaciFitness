@@ -18,3 +18,5 @@ function enteries ( state = {},enteries)
     }
     
 }
+
+export default enteries
