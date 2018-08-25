@@ -48,13 +48,14 @@ export function timeToString (time = Date.now()) {
 export function getMetricMetaInfo (metric) {
     
     const info = {
-        run: {
+         run: {
             displayName: 'Run',
             max: 50,
             unit: 'miles',
             step: 1,
             type: 'steppers',
             getIcon() {
+              return(
                 <View>
                     <MaterialIcons 
                         name='directions-run'
@@ -62,7 +63,7 @@ export function getMetricMetaInfo (metric) {
                         size={35}
                  />
                     </View>
-            }
+              )}
         },
         bike: {
              displayName: 'Bike',
@@ -71,6 +72,7 @@ export function getMetricMetaInfo (metric) {
             step: 1,
             type: 'steppers',
             getIcon() {
+              return(
                 <View>
                     <MaterialCommunityIcons 
                         name='bike'
@@ -78,7 +80,7 @@ export function getMetricMetaInfo (metric) {
                         size={35}
                  />
                     </View>
-            }
+              )}
             
         },
         swim: { 
@@ -88,6 +90,7 @@ export function getMetricMetaInfo (metric) {
             step: 100,
             type: 'steppers',
             getIcon() {
+              return(
                 <View>
                     <MaterialIcons 
                         name='directions-run'
@@ -95,7 +98,8 @@ export function getMetricMetaInfo (metric) {
                         size={35}
                  />
                     </View>
-            }},
+              )},
+            },
         sleep: {
              displayName: 'run',
             max: 24,
@@ -103,6 +107,7 @@ export function getMetricMetaInfo (metric) {
             step: 1,
             type: 'slider',
             getIcon() {
+              return(
                 <View>
                     <FontAwesome 
                         name='bed'
@@ -110,7 +115,7 @@ export function getMetricMetaInfo (metric) {
                         size={35}
                 />
                     </View>
-            }
+              )}
         },
         eat: {
              displayName: 'run',
@@ -119,20 +124,20 @@ export function getMetricMetaInfo (metric) {
             step: 1,
             type: 'slider',
             getIcon() {
+              return(
                 <View>
-                    <FontAwesome 
+                    <MaterialCommunityIcons
                         name='food'
                         color={red}
                         size={35}
                 />
                     </View>
-            }
+              );
+              },
         },
         
-    }
-    return typeof metric === 'undefined'
-    ?info
-    :info[metric]
+        }
+    return  typeof metric === 'undefined' ? info : info[metric] 
     
 }
 export function getDailyRemainder() {
