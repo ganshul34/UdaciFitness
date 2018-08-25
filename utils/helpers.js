@@ -93,7 +93,7 @@ export function getMetricMetaInfo (metric) {
               return(
                 <View>
                     <MaterialIcons 
-                        name='directions-run'
+                        name='swim'
                         color={red}
                         size={35}
                  />
@@ -142,6 +142,6 @@ export function getMetricMetaInfo (metric) {
 }
 export function getDailyRemainder() {
   return{
-    today: "Don't forget to add your data today"
+    today: "👋 Don't forget to add your data today"
   }
 }
